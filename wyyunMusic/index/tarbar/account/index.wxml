@@ -1,0 +1,88 @@
+<scroll-view scroll-y class="wrap">
+    <view class="top">
+        <view class="flex userInfo">
+            <image src="{{user.img}}"></image>
+            <view>{{user.name}}</view>
+            <button>签到</button>
+        </view>
+        <view class="nav">
+            <view class="flex">
+                <view>
+                    <view>动态</view>
+                    <view class="num">0</view>
+                </view>
+                <view>
+                    <view>关注</view>
+                    <view class="num">4</view>
+                </view>
+                <view>
+                    <view>粉丝</view>
+                    <view class="num">0</view>
+
+                </view>
+                <view bindtap='skipMyInfoPage'>
+                    <view class="iconfont icon-pen" style="font-size:16px"></view>
+                    <view style="margin-top: 5px;">我的资料</view>
+                </view>
+
+            </view>
+
+
+        </view>
+    </view>
+    <view class="functions myMess">
+        <view class="_flex">
+            <view><text class="iconfont icon-icon-p_xinfeng fun_icon"/>我的消息</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+    </view>
+    <view class="functions myMess">
+        <view class="_flex">
+            <view><text class="iconfont icon-viphuiyuan fun_icon"/>会员中心</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-qicheqianlian- fun_icon"/>商城</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-youxi fun_icon"/>游戏推荐Beta</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-yinxiang fun_icon"/>在线听歌免流量</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+    </view>
+    <view class="functions">
+        <view class="_flex">
+            <view><text class="iconfont icon-shezhi fun_icon"/>设置</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-saoyisao fun_icon"/>扫一扫</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-yifu fun_icon"/>个性换肤</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-shizhong fun_icon"/>夜间模式</view>
+            <switch style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-naozhong fun_icon"/>音乐闹钟</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-che fun_icon"/>驾驶模式</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view><text class="iconfont icon-youhuiquan fun_icon"/>优惠券</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+    </view>
+    <button class="exitLogin" bindtap='exitLogin'>退出登陆</button>
+</scroll-view>

@@ -1,0 +1,93 @@
+.wrap {
+    background: #eef0ef;
+}
+
+.wrap .flex {
+    display: flex;
+    text-align: center;
+}
+
+.wrap ._flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap .flex > view {
+    flex-grow: 1;
+}
+
+.wrap .userInfo {
+    height: 100px;
+    line-height: 100px;
+    font-size: 16px;
+    color: #000;
+}
+
+.wrap .userInfo > button {
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+    margin: 35px 30px 35px 0;
+    font-size: 14px;
+    color: #c62f2f;
+    border: 1px solid #c62f2f;
+    border-radius: 20px;
+}
+
+.wrap .userInfo image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px 10px 20px 50px;
+}
+
+.wrap .nav .num {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.wrap .userInfo >view {
+    text-align: left;
+}
+
+.wrap .nav {
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.wrap .functions, .top {
+    background: #fafcfb;
+    margin-bottom: 15px;
+}
+
+.wrap .functions > view {
+    font-size: 16px;
+    color: #000;
+    height: 50px;
+    line-height: 50px;
+    width: 90%;
+    margin-left: 10%;
+    border-bottom: 2px solid #eef0ef;
+}
+
+.wrap .myMess {
+    border: none;
+}
+
+.wrap .fun_icon {
+    position: relative;
+    top: 2px;
+    left: -22px;
+    color:#000;
+    font-size: 20px;
+}
+
+.wrap .functions > view:last-child {
+    margin-bottom: 15px;
+}
+
+.wrap .exitLogin {
+    color: #c62f2f;
+    font-size: 16px;
+    margin-bottom: 10px;
+}

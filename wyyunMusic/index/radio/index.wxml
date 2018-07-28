@@ -1,0 +1,53 @@
+<template name="radio">
+    <view class="menu">
+        <view class="flex category">
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-shuyeu" />
+                </view>
+                <text>电台分类</text> </view>
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-danxiangfenlei" />
+                </view>
+                <text>电台排行</text>
+            </view>
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-huangguan" />
+                </view>
+                <text>付费精品</text>
+            </view>
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-binggun" />
+                </view>
+                <text>小冰电台</text>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="title">
+            <text class="radio_title">今日优选</text>
+            <text class="radio_huan">
+                <text>
+                    <text class="iconfont icon-shuaxin" style="margin-right:10px"/>换一换
+                </text>
+            </text>
+        </view>
+        <view class="imgs">
+            <view class="flex radio_img_left">
+                <image src='../../../../imgs/img1.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+            <view class="flex radio_img_left">
+                <image src='../../../../imgs/img2.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+            <view class="flex radio_img_left">
+                <image src='../../../../imgs/img3.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+        </view>
+    </view>
+</template>

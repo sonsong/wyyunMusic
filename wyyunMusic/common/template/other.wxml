@@ -1,0 +1,23 @@
+<template name="other">
+    <view class="index_other">
+        <view class="index_other_title">其它{{title}}方式</view>
+        <view class="login_method">
+            <view class="wx" bindtap='loginByWX'>
+                <view class="iconfont icon-weixin" />
+                <text>微信</text>
+            </view>
+            <view class="qq" bindtap='loginByQQ'>
+                <view class="iconfont icon-qq" />
+                <text>QQ</text>
+            </view>
+            <view class="blog" bindtap='loginByBlog'>
+                <view class="iconfont icon-weibo" />
+                <text>微博</text>
+            </view>
+            <view class="wyEmail" bindtap='loginByEmail'>
+                <view class="iconfont icon-email" />
+                <text>网易邮箱</text>
+            </view>
+        </view>
+    </view>
+</template>

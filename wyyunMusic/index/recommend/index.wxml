@@ -1,0 +1,64 @@
+<template name="recommend">
+    <view class="menu">
+        <view class="flex category">
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-shouyinji" />
+                </view>
+                <text>私人FM</text>
+            </view>
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-rili" />
+                </view>
+                <text>每日推荐</text>
+            </view>
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-musicsy" />
+                </view>
+                <text>歌单</text> </view>
+            <view>
+                <view class="menu_bg">
+                    <view class="iconfont icon-bar" />
+                </view>
+                <text>排行版</text> </view>
+        </view>
+    </view>
+    <scroll-view scroll-y class="content">
+        <view class="title">推荐歌单
+            <text class="iconfont icon-youjiantou"></text>
+        </view>
+        <view class="flex imgs">
+            <view>
+                <image src='../../../../imgs/img1.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+            <view>
+                <image src='../../../../imgs/img2.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+            <view>
+                <image src='../../../../imgs/img3.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+        </view>
+        <view class="title">最新音乐
+            <text class="iconfont icon-youjiantou"></text>
+        </view>
+        <view class="flex imgs">
+            <view>
+                <image src='../../../../imgs/img1.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+            <view>
+                <image src='../../../../imgs/img2.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+            <view>
+                <image src='../../../../imgs/img3.png' style='width:120px;height:120px'></image>
+                <view class="desc">闹铃换成这些哥，我就没有迟到过</view>
+            </view>
+        </view>
+    </scroll-view>
+</template>

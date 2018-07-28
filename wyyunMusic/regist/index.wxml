@@ -1,0 +1,20 @@
+<import src="../common/template/other.wxml"/>
+<view class="wrap">
+    <view class="form">
+        <form bindsubmit="registByTele">
+            <view class="formInput telephone">
+                <text class="iconfont icon-phone icon-username" />
+                <text class="telep_refix">+86</text>
+                <input focus class="tele" name="telephone" placeholder='输入手机号' placeholder-class="placeholder" />
+            </view>
+            <view class="formInput passwd">
+                <text class="iconfont icon-passwd icon-password" />
+                <input password name="passwd" placeholder='设置登陆密码，不少于6位' placeholder-class="placeholder" />
+            </view>
+            <view class="submitBtn">
+                <button formType="submit">注册</button>
+            </view>
+        </form>
+    </view>
+    <template is="other" data="{{title}}"/>
+</view>

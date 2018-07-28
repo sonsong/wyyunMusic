@@ -1,0 +1,83 @@
+<view class="wrap">
+    <image src='{{user.bg}}' class="bg absolute" />
+    <view class="content absolute">
+        <view class="functions myMess">
+            <view class="_flex">
+                <view>头像</view>
+                <view class="_flex" bindtap="changeImg" id="img">
+                    <image src="{{user.img}}" mode="aspectFitf" class="info_img info_center pic"></image>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+            </view>
+            <view class="_flex">
+                <view>个人主页背景</view>
+                <view class="_flex" bindtap="changeImg" id="bg">
+                    <image src="{{user.bg}}" class="info_img"></image>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+
+            </view>
+            <view class="_flex">
+                <view>昵称</view>
+                <view class="_flex" bindtap='inputName' id="{{user.name}}">
+                    <text class="info">{{user.name}}</text>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+
+            </view>
+            <view class="_flex">
+                <view>性别</view>
+                <view class="_flex">
+                    <picker bindchange="bindPickerChange" value="{{user.sex}}" range="{{array}}">
+                        <view class="picker">
+                            <text class="info">{{array[user.sex]}}</text>
+                        </view>
+                    </picker>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+
+            </view>
+            <view class="_flex">
+                <view>二维码</view>
+                <view class="_flex">
+                    <text class="iconfont icon-QR info"></text>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+
+            </view>
+        </view>
+        <view class="functions myMess">
+            <view class="_flex">
+                <view>生日</view>
+                <view class="_flex">
+                    <picker mode="date" value="{{date}}" start="1700-01-01" end="2018-12-31" bindchange="bindDateChange">
+                        <view class="picker">
+                            <text class="info">{{user.birth}}</text>
+                        </view>
+                    </picker>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+
+            </view>
+            <view class="_flex">
+                <view>地区</view>
+                <view class="_flex">
+                    <picker mode="region" bindchange="bindRegionChange" value="{{user.region}}" custom-item="{{customItem}}">
+                        <view class="picker">
+                            <text class="info">{{user.region[0]}} {{user.region[1]}} {{user.region[2]}}</text>
+                        </view>
+                    </picker>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+            </view>
+            <view class="_flex">
+                <view>大学</view>
+                <view class="_flex">
+                    <text class="info">家里蹲大学</text>
+                    <view class="iconfont icon-youjiantou" style='padding:0 20px' />
+                </view>
+
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "wyyunMusic/login/login_index/index",
+        "wyyunMusic/login/reset_passwd/index",
+        "wyyunMusic/login/tele_login/index",
+        "wyyunMusic/regist/index",
+        "wyyunMusic/index/tarbar/account/myInfo/index",
+        "wyyunMusic/index/tarbar/account/myInfo/updataName/index",
+        "wyyunMusic/index/tarbar/account/index",
+        "wyyunMusic/index/tarbar/vedio/index",
+        "wyyunMusic/index/tarbar/my/index",
+        "wyyunMusic/index/tarbar/friends/index",
+        "wyyunMusic/index/tarbar/found/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#c62f2f",
+        "navigationBarTitleText": "网易云音乐Beta",
+        "navigationBarTextStyle": "#fff",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#c62f2f",
+        "list": [
+            {
+                "pagePath": "wyyunMusic/index/tarbar/found/index",
+                "text": "发现",
+                "iconPath": "imgs/music.png",
+                "selectedIconPath": "imgs/music_active.png"
+            },
+            {
+                "pagePath": "wyyunMusic/index/tarbar/vedio/index",
+                "text": "视频",
+                "iconPath": "imgs/bofang.png",
+                "selectedIconPath": "imgs/bofang_active.png"
+            },
+            {
+                "pagePath": "wyyunMusic/index/tarbar/my/index",
+                "text": "我的",
+                "iconPath": "imgs/yinyue.png",
+                "selectedIconPath": "imgs/yinyue_active.png"
+            },
+            {
+                "pagePath": "wyyunMusic/index/tarbar/friends/index",
+                "text": "朋友",
+                "iconPath": "imgs/friends.png",
+                "selectedIconPath": "imgs/friends_active.png"
+            },
+            {
+                "pagePath": "wyyunMusic/index/tarbar/account/index",
+                "text": "账号",
+                "iconPath": "imgs/account.png",
+                "selectedIconPath": "imgs/account_active.png"
+            }
+        ]
+    }
+}

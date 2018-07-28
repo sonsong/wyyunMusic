@@ -1,0 +1,29 @@
+<import src="../../recommend/index.wxml"/>
+<import src="../../radio/index.wxml"/>
+<scroll-view scroll-y class="wrap">
+    <view class="top">
+        <view class="flex top_search">
+            <view class="iconfont icon-maikefeng"></view>
+            <input class="search_music" placeholder='搜索你喜欢的音乐' placeholder-class="placeholder"/>
+            <view class="iconfont icon-trend"></view>
+        </view>
+        <view class="flex top_tab">
+            <view bindtap='getPageType' id="recommend" style="color:white">个性推荐</view>
+            <view bindtap='getPageType' id="radio" style="color:white">主播电台</view>
+        </view>
+    </view>
+    <swiper class="slider" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+        interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view wx:if="{{type === 'recommend'}}">
+        <template is="recommend"/>
+    </view>
+    <view wx:elif="{{type === 'radio'}}">
+        <template is="radio"/>
+    </view>
+</scroll-view>

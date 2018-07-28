@@ -1,0 +1,161 @@
+.wrap {
+    position: relative;
+}
+
+.wrap .top {
+    width: 100%;
+    height: 200px;
+    background: #c62f2f;
+}
+
+.wrap .top_search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background: #c62f2f;
+    z-index: 3;
+}
+
+.wrap .top_search > .iconfont {
+    font-size: 30px;
+    color: #fff;
+}
+
+.wrap .top_search > input {
+    width: 70%;
+    background: rgb(211, 209, 209);
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 5px 0;
+    opacity: 0.5;
+}
+
+.wrap .top_search .placeholder {
+    color: #fff;
+}
+
+.wrap .menu {
+    height: 150px;
+}
+
+.wrap .flex {
+    display: flex;
+    text-align: center;
+}
+
+.wrap .flex > view {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrap .menu .category {
+    position: relative;
+    left: 0px;
+    top: 50px;
+    height: 100px;
+}
+
+.wrap .top_tab {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #c62f2f;
+    z-index: 3;
+}
+
+.wrap .menu .category .menu_bg {
+    background: #c62f2f;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.wrap .menu .category .iconfont {
+    font-size: 30px;
+    color: #fff;
+}
+
+.wrap .content {
+    height: 100%;
+}
+
+.wrap .content .imgs {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wrap .content .title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.wrap .content .radio_title, .radio_huan{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+.wrap .content .radio_huan{
+    text-align: right;
+    padding-right: 30px;
+    font-weight: normal;
+    font-size: 14px;
+}
+.wrap .content .desc {
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.wrap .content .desc:hover {
+    color: #c62f2f;
+    text-decoration: underline;
+}
+
+.wrap .content .radio_img_left {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.wrap .footer_tab {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    background: skyblue;
+}
+
+.wrap .footer_tab > view {
+    font-size: 12px;
+}
+
+.wrap .slider {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 130px;
+    z-index: 2;
+}
+
+.wrap .slider image {
+    width: 90%;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+<import src="../../common/template/other.wxml"/>
+<view class="index_wrap">
+    <view class="index_bg">
+        <image src='../imgs/index_bg.jpg' class="index_img"/>
+    </view>
+    <view class="index_select">
+        <view class="empty"></view>
+        <navigator class="btn tele_logo" url="/wyyunMusic/login/tele_login/index" 
+            hover-class="navigator-hover">手机号登陆</navigator>
+        <navigator class="btn regist" url="/wyyunMusic/regist/index" 
+            hover-class="navigator-hover">注册</navigator>
+        <view class="noRegist" bindtap="skipIndexPage">游客试用</view>
+
+    </view>
+    <template is="other" data="{{title}}"/>
+</view>

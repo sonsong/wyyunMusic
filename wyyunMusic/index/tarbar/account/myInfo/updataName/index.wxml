@@ -1,0 +1,13 @@
+<view class="wrap">
+    <view class="form">
+        <form bindsubmit="submit">
+            <view class="formInput">
+                <input focus class="name" name="name" value="{{name}}" 
+                    placeholder='输入用户名' placeholder-class="placeholder" />
+            </view>
+            <view class="submitBtn">
+                <button formType="submit">确定</button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+.index_other{
+    height: 15%;
+    text-align: center;
+}
+.index_other .index_other_title{
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.index_other .login_method{
+    display: flex;
+    color:rgb(71, 69, 69);
+}
+.index_other .login_method > view{
+    flex-grow: 1;
+    font-size: 12px;
+}
+.index_other .login_method > view:hover{
+    color:#c62f2f;
+}
+.index_other .login_method > view .iconfont{
+    font-size: 40px;
+}

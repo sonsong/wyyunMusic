@@ -1,0 +1,9 @@
+@import "../../common/css/form.wxss";
+
+.wrap .resetPasswd{
+    font-size: 14px;
+    text-decoration: underline;
+    color:rgb(68, 67, 67);
+    text-align: center;
+    margin-top: 20px;
+}

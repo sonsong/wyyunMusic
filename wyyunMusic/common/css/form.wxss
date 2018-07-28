@@ -1,0 +1,51 @@
+page, .wrap{
+    width: 100%;
+    height: 100%;
+}
+.wrap .form{
+    width: 100%;
+}
+
+.wrap .formInput > input, .passwd > input{
+    box-sizing: border-box;
+    border-bottom:1px solid rgb(204, 201, 201);
+    margin: 10px auto;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 35px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.wrap .icon-username, .icon-passwd, .telep_refix{
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+.wrap .placeholder{
+    color:rgb(161, 158, 158);
+}
+.wrap .submitBtn{
+    width: 80%;
+    margin: 0px auto;
+}
+.wrap .submitBtn > button{
+    margin-top: 20px;
+}
+.wrap .submitBtn > button{
+    border-radius: 20px;
+    background: #c62f2f;
+    color:#d6cfcf;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+}
+.wrap .telep_refix{
+    top:41px;
+    left: 50px;
+    font-size: 16px;
+}
+
+.wrap .formInput .tele{
+    padding-left: 60px;
+}

@@ -1,0 +1,19 @@
+<view class="wrap">
+    <view class="form">
+        <form bindsubmit="userLogin">
+            <view class="formInput telephone">
+                <text class="iconfont icon-phone icon-username"/>
+                <input focus name="telephone" placeholder='手机号' placeholder-class="placeholder"/>
+            </view>
+            <view class="formInput passwd">
+                <text class="iconfont icon-passwd icon-password"/>
+                <input password name="passwd" placeholder='密码' placeholder-class="placeholder"/>
+            </view>
+            <view class="submitBtn">
+                <button formType="submit">登陆</button>
+            </view>
+            <navigator class="resetPasswd" url="/wyyunMusic/login/reset_passwd/index" 
+                hover-class="navigator-hover">重置密码</navigator>
+        </form>
+    </view>
+</view>

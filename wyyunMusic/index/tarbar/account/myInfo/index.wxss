@@ -1,0 +1,64 @@
+.wrap {
+    background: #eef0ef;
+}
+.wrap .absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.wrap .bg{
+    opacity: 0.2;
+}
+.wrap .content{
+    z-index: 2
+}
+.wrap .functions, .top {
+    background: #fafcfb;
+    margin-bottom: 15px;
+}
+.wrap ._flex {
+    display: flex;
+    justify-content: space-between;
+} 
+.wrap .info_img{
+    width: 40px;
+    height: 40px;
+    margin:10px 0;
+}
+.wrap .pic{
+    border-radius: 50%;
+}
+.wrap .info{
+    font-size: 16px;
+    color: rgb(177, 174, 174);
+}
+.wrap .flex > view {
+    flex-grow: 1;
+}
+.wrap .functions > view {
+    font-size: 18px;
+    color: #000;
+    height: 60px;
+    line-height: 60px;
+    width: 95%;
+    margin-left: 5%;
+    border-bottom: 2px solid #eef0ef;
+}
+
+.wrap .myMess {
+    border: none;
+}
+
+.wrap .fun_icon {
+    position: relative;
+    top: 2px;
+    left: -22px;
+    color:#000;
+    font-size: 20px;
+}
+
+.wrap .functions > view:last-child {
+    margin-bottom: 15px;
+}
