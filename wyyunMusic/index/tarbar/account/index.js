@@ -3,7 +3,8 @@ Page({
     data: {
         user:{
             name:"请先登陆",
-            img:"../../../../imgs/img1.png"
+            img:"../../../../imgs/img1.png",
+            login:false
         }
     },
     onLoad(){
@@ -18,8 +19,17 @@ Page({
             success: function (res) {
                 that.setData({
                     user: res.data
+                });
+                that.setData({
+                    login:true
                 })
             },
+            fail(){
+                //表示没有登陆 是游客身份
+                that.setData({
+                    login: false
+                })
+            }
         });
     },
     /**
@@ -38,13 +48,20 @@ Page({
      * 跳转到我的资料页面
      */
     skipMyInfoPage(){
-        wx.navigateTo({
-            url: './myInfo/index',
-            success(){
-                wx.setNavigationBarTitle({
-                    title:"我的资料"
-                })
-            }
-        })
+        if(this.data.login){
+            wx.navigateTo({
+                url: './myInfo/index',
+                success() {
+                    wx.setNavigationBarTitle({
+                        title: "我的资料"
+                    })
+                }
+            })
+        }else{
+            wx.showToast({
+                icon:'none',
+                title: '对不起，请您先登陆',
+            })
+        }
     }
 })

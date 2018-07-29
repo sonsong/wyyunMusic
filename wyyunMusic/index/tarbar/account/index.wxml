@@ -84,5 +84,6 @@
             <view class="iconfont icon-youjiantou" style='padding-right:25px' />
         </view>
     </view>
-    <button class="exitLogin" bindtap='exitLogin'>退出登陆</button>
+    <button class="exitLogin" bindtap='exitLogin' wx:if='{{login}}'>退出登陆</button>
+    <button class="exitLogin" bindtap='exitLogin' wx:else>去登陆</button>
 </scroll-view>
