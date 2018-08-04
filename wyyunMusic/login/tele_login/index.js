@@ -4,16 +4,15 @@ Page({
 
     },
     /**
-     * 用户登陆
+     * 用户登陆 内存版
      */
-    userLogin(e) {
+    /*userLogin(e) {
         wx.getStorage({
             key: 'regist_info',
             success: function(res) {
                 let user_info = res.data;
-                /**
-                 * 校验用户名和密码
-                 */
+                
+                //校验用户名和密码
                 const tele = e.detail.value.telephone;
                 const pass = e.detail.value.passwd;
 
@@ -57,6 +56,53 @@ Page({
                 })
             }
         })
+    }*/
+    userLogin(e){
+        const telephone = e.detail.value.telephone;
+        const passwd = e.detail.value.passwd;
+        //做简单校验
+        if(telephone == "" || passwd == ""){
+            wx.showToast({
+                icon:"none",
+                title: '请输入用户名或密码'
+            })
+            return;
+        }
+
+        //发送请求，做登陆检验
+        wx.request({
+            url: "http://localhost:3000/login/cellphone",
+            method: "Get",
+            dataType: "json",
+            data:{
+                phone : telephone,
+                password : passwd
+            },
+            success(res) {
+                if(res.data.code !== 200){
+                    wx.showToast({
+                        icon:'none',
+                        title: '用户名或密码错误',
+                    })
+                    return;
+                }else{
+                    //用户登陆的相关信息
+                    const account = res.data.account;
+                    //存储到local中
+                    wx.setStorage({
+                        key: 'account',
+                        data: account,
+                        success(){
+                            //跳转到首页
+                            wx.switchTab({
+                                url: '../../index/tarbar/found/index'
+                            })
+                        }
+                    })
+                }
+            }
+        });
+
     },
     onLoad(){
         wx.setNavigationBarTitle({

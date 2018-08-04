@@ -1,2 +1,42 @@
-<!--pages/tarbar/vedio/index.wxml-->
-<text>pages/tarbar/vedio/index.wxml</text>
+<scroll-view scroll-y class="wrap">
+    <view class="top">
+        <view class="flex top_search">
+            <view class="iconfont icon-maikefeng"></view>
+            <view class="iconfont icon-fangdajing"></view>
+            <input class="search_music" placeholder='搜索你喜欢的音乐' placeholder-class="placeholder" />
+            <view class="iconfont icon-trend"></view>
+        </view>
+        <view class="top_nav flex">
+            <view bindtap='selectMvType' id="0" class="{{flag == 0 ? 'recommend' : ''}}">推荐</view>
+            <view bindtap='selectMvType' id="1" class="{{flag == 1 ? 'mv' : ''}}">MV</view>
+            <view bindtap='selectMvType' id="2" class="{{flag == 2 ? 'dance' : ''}}">舞蹈</view>
+            <view bindtap='selectMvType' id="3" class="{{flag == 3 ? 'music' : ''}}">音乐</view>
+            <view bindtap='selectMvType' id="4" class="{{flag == 4 ? 'showTime' : ''}}">Showtime</view>
+        </view>
+    </view>
+    <view class="content" wx:for="{{mvResult}}" wx:key="{{idex}}">
+        <view class="part">
+            <view class="video">
+                <view class="iconfont icon-bofang bofang"></view>
+                <image src='{{item.picUrl}}' class="video_img"></image>
+                <view class="video_desc">{{item.copywriter}}</view>
+            </view>
+            <view class="video_detail">
+                <view>
+                    <text class="iconfont icon-bofang"></text>{{item.playCount}}</view>
+                <view>
+                    <text class="iconfont icon-trend"></text>{{item.duration}}</view>
+            </view>
+            <view class="mess">
+                <view class="from flex">
+                    <image src='../../../../imgs/img3.png'></image>
+                    <view>{{item.artistName}}</view>
+                </view>
+                <view class="flex dl">
+                    <view class="iconfont icon-dianzan">123456</view>
+                    <view class="iconfont icon-62">1333</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

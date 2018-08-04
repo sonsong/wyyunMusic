@@ -1,0 +1,150 @@
+.wrap {
+    background: #0a0906;
+}
+
+.wrap .bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+    z-index: 0;
+}
+.wrap .line{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    width: 22%;
+    height: 23%;
+    z-index: 2;
+}
+
+.wrap .photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    margin: auto;
+    height: 350px;
+    width: 350px;
+    background: #222;
+    border-radius: 50%;
+    z-index: 1;
+}
+.wrap .photo > view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #151515;
+    border: 2px solid #000;
+}
+.wrap .photo image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+.wrap audio {
+    position: fixed;
+    bottom: 0;
+    left: 55px;
+}
+
+.wrap .play{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color:#fff;
+    width: 100%;
+    height: 200px;
+    z-index: 3;
+}
+.wrap .play > view{
+    line-height: 70px;
+    height: 70px;
+}
+.wrap .play > view:first-child{
+    line-height: 30px;
+    height: 30px;
+}
+.wrap .play > view:last-child{
+    line-height: 100px;
+    height: 100px;
+}
+.wrap .play > view .iconfont{
+    font-size: 30px;
+    font-weight: normal;
+}
+.wrap .play .dian{
+    transform: rotate(90deg)
+}
+.wrap .play .pause{
+    margin: 0 30px;
+    font-size: 55px !important;
+}
+.wrap .play .play_slider > view:first-child, .play_slider > view:last-child{
+    width: 20%;
+    text-align: center
+}
+.wrap .play .play_slider{
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+.wrap .play slider{
+    width: 75%;
+    margin-top: 27px
+}
+.wrap .scroll-view{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: rgba(184, 182, 182, 0.8);
+    z-index: 5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.wrap .empty{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    z-index: 5;
+}
+.wrap .scroll-view .musicList{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 20px;
+}
+.wrap .scroll-view .musicList .red{
+    color:#c62f2f;
+}
+.wrap .scroll-view .closeMusicList{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color:#c62f2f;
+    text-align: center;
+    background: rgb(167, 164, 164);
+    z-index: 6;
+}

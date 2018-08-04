@@ -1,0 +1,41 @@
+.wrap .flex {
+    display: flex;
+    text-align: center;
+}
+.wrap .top_search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background: #c62f2f;
+    z-index: 3;
+}
+.wrap .top_search > view{
+    flex-grow: 1
+}
+.wrap .top_search > .iconfont {
+    font-size: 30px;
+    color: #fff;
+}
+
+.wrap .top_search > input {
+    width: 70%;
+    background: rgb(211, 209, 209);
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 5px 0;
+    opacity: 0.5;
+}
+.wrap .top_search .placeholder {
+    color: #fff;
+    margin-left: 45px;
+}
+.wrap .top_search .icon-fangdajing{
+    position: absolute;
+    top:9px;
+    right: 77px;
+    color:rgb(211, 209, 209);
+    font-size: 18px;
+}

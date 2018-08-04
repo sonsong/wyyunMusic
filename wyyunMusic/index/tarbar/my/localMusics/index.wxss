@@ -1,0 +1,70 @@
+.wrap ._top {
+    background: #c62f2f;
+    text-align: center;
+    color: #fff;
+    padding-top: 5px;
+}
+
+.wrap ._top .top_nav {
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.wrap ._top .top_nav view {
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.wrap ._top .top_nav .single, .show, .mv {
+    color: #c62f2f;
+    background: #fff;
+}
+
+.wrap ._top .top_type .song, .singer, .album {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+}
+
+.wrap ._top .top_type {
+    line-height: 40px;
+    height: 40px;
+}
+
+.wrap ._top .top_type .total {
+    font-size: 12px;
+}
+
+.wrap .search {
+    height: 50px;
+    line-height: 50px;
+    background: #eef0ef;
+}
+
+.wrap .search > input {
+    border: 1px solid #eef0ef;
+    border-radius: 20px;
+    width: 80%;
+    margin: 5px auto;
+    padding: 5px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.wrap .placeholder {
+    color: rgb(139, 136, 136);
+    font-size: 14px;
+}
+
+.wrap .search .icon-fangdajing {
+    position: absolute;
+    top: 72px;
+    right: 36px;
+    color: rgb(139, 136, 136);
+    font-size: 18px;
+}
+
+@import "../../../../common/css/musicList.wxss"

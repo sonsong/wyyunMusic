@@ -89,40 +89,55 @@ Page({
      * 性别选择
      */
     bindPickerChange(e) {
-        const that = this;
         this.setData({
             "user.sex":e.detail.value
         });
-        wx.setStorage({
-            key: 'user',
-            data: that.user
-        })
+        this.updataUserInfo(this.data.user);
     },
     /**
      * 时间选择器
      */
     bindDateChange(e) {
-        const that = this;
         this.setData({
-            "user.birth" : e.detail.value
+            "user.birth": e.detail.value
         });
-        wx.setStorage({
-            key: 'user',
-            data: that.user
-        })
+        this.updataUserInfo(this.data.user);
     },
     /**
      * 城市选择器
      */
     bindRegionChange(e){
-        const that = this;
         
         this.setData({
             "user.region" : e.detail.value
         });
-        wx.setStorage({
-            key: 'user',
-            data: that.user
+        this.updataUserInfo(this.data.user);
+    },
+    /**
+     * 更新用户信息
+     */
+    updataUserInfo(user){
+        wx.request({
+            url: "http://localhost:3000/user/update/",
+            method: "Get",
+            dataType: "json",
+            data: {
+                gender: user.sex,
+                signature: "测试签名",
+                nickname: user.name,
+                birthday: user.birth,
+                province: user.region[0],
+                city: user.region[1]
+            },
+            success(res) {
+                wx.setStorage({
+                    key: 'user',
+                    data: user
+                })
+            },
+            fail(e) {
+                console.log(e)
+            }
         })
     }
 })

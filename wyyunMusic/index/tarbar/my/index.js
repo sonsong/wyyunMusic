@@ -1,66 +1,43 @@
-// pages/tarbar/my/index.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+    data: {
+        show: false,
+        recentCount : 0
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    onLoad: function(options) {
+        wx.setNavigationBarTitle({
+            title: '我的音乐',
+        })
+    },
+    onShow(){
+        const that = this;
+        wx.getStorage({
+            key: 'musicStacks',
+            success: function(res) {
+                const data = res.data;
+                that.setData({
+                    recentCount : data.length                    
+                })
+            }
+        })
+    },
+    showMusicList() {
+        this.setData({
+            show: !this.data.show
+        })
+    },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    /**
+     * e.currentTarget.id
+     *  0/本地音乐 1/最近播放 2/我的电台 3/我的收藏
+     */
+    skipMusicDetailPage(e) {
+        console.log(e)
+        if(e.currentTarget.id === "0"){
+            wx.navigateTo({
+                url: './localMusics/index',
+            })
+        }
+    }
 })

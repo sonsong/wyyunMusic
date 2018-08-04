@@ -1,2 +1,64 @@
-<!--pages/tarbar/my/index.wxml-->
-<text>pages/tarbar/my/index.wxml</text>
+<scroll-view scroll-y class="wrap">
+    <view class="functions">
+        <view class="_flex" bindtap="skipMusicDetailPage" id="0">
+            <view>
+                <text class="iconfont icon-yinyue_active fun_icon" />本地音乐</view>
+            <view class='total'>0</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view>
+                <text class="iconfont icon-bofang fun_icon" />最近播放</view>
+            <view class='total'>{{recentCount}}</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view>
+                <text class="iconfont icon-yinxiang fun_icon" />我的电台</view>
+            <view class='total'>123</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+        <view class="_flex">
+            <view>
+                <text class="iconfont icon-icon- fun_icon" />我的收藏</view>
+            <view class='total'>歌手/专辑/视频/专栏</view>
+            <view class="iconfont icon-youjiantou" style='padding-right:25px' />
+        </view>
+    </view>
+
+    <view class="musics">
+        <view class="title" bindtap='showMusicList'>
+            <view class="iconfont icon-youjiantou {{show}}"></view>
+            <view>我创建的歌单(1)</view>
+        </view>
+        <view class="list" wx:if="{{show}}">
+            <view class="iconfont icon-shoucang"></view>
+            <view>
+                <view>我创建的歌单</view>
+                <view>10首</view>
+            </view>
+        </view>
+
+    </view>
+
+    <view class="recommend_music_list">
+        <view class="title">
+            <view>推荐歌单</view>
+        </view>
+        <view class="list flex">
+            <view>
+                <image src='../../../../imgs/img1.png'></image>
+                <view>云音乐热歌榜</view>
+            </view>
+            <view>
+                <image src='../../../../imgs/img2.png'></image>
+                <view>云音乐热歌榜</view>
+            </view>
+            <view>
+                <image src='../../../../imgs/img3.png'></image>
+                <view>云音乐热歌榜</view>
+            </view>
+        </view>
+
+    </view>
+</scroll-view>

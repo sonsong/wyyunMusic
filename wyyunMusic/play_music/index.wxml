@@ -1,0 +1,44 @@
+<view class="wrap">
+    <image class="line" src="../../imgs/line.png" />
+    <view class="photo">
+        <view>
+            <image src='{{music.picUrl}}' style="{{transform}}" />
+        </view>
+    </view>
+    <view class="play">
+        <view class="flex">
+            <view></view>
+            <view class="iconfont icon-shoucang" />
+            <view class="iconfont icon-xiazai" bindtap='downLoadMusic' data-url='{{music.url}}' />
+            <view class="iconfont icon-62" />
+            <view class="iconfont icon-dian dian" />
+            <view></view>
+        </view>
+        <view class="flex play_slider">
+            <view>{{playTime}}</view>
+            <slider min="0" max="{{max}}" step="1" backgroundColor="#5c5a53" 
+                activeColor="#d43932" block-size="15" value="{{value}}" 
+                bindchange="slideChangeHandle" />
+                <view>{{time}}</view>
+        </view>
+        <view class="flex">
+            <view class="iconfont icon-qianjin1" bindtap='loopMusic' />
+            <view class="flex">
+                <view class="iconfont icon-houtui" bindtap='nextMusic' id="before" />
+                <view class="iconfont icon-vedio pause" wx:if="{{!play}}" bindtap='pauseOrPlayMusic' />
+                <view class="iconfont icon-zanting pause" wx:else bindtap='pauseOrPlayMusic' />
+                <view class="iconfont icon-qianjin" bindtap='nextMusic' id="after" />
+            </view>
+            <view class="iconfont icon-caidan- MusicMenu" bindtap='showOrHiddenMusicList'/>
+        </view>
+    </view>
+    <view class="empty" bindtap='closeMusicList'></view>
+    <scroll-view scroll-y class="scroll-view" style='{{display}}'>
+        <view class="musicList" wx:for="{{musicStacks}}" 
+            wx:key="index" data-music="{{item}}" bindtap='playMusic'>
+            <text class="{{music.id === item.id}} ? 'red':''">{{item.name}}</text>
+        </view>
+        <view class="closeMusicList" bindtap='closeMusicList'>关闭</view>
+    </scroll-view>
+    <image class="bg" src='{{music.picUrl}}'/>
+</view>

@@ -11,5 +11,13 @@
 page, .wrap{
     height: 100%;
     width: 100%;
+    font-size: 16px;
 }
-@import "./wyyunMusic/common/css/icon.wxss"
+.wrap .flex {
+    display: flex;
+    justify-content:space-around;
+}
+.wrap .flex .view{
+    flex-grow: 1;
+}
+@import "./wyyunMusic/common/css/icon/icon.wxss"

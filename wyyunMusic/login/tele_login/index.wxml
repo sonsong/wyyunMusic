@@ -3,7 +3,7 @@
         <form bindsubmit="userLogin">
             <view class="formInput telephone">
                 <text class="iconfont icon-phone icon-username"/>
-                <input focus name="telephone" placeholder='手机号' placeholder-class="placeholder"/>
+                <input focus name="telephone" placeholder='手机号' maxlength='11' placeholder-class="placeholder"/>
             </view>
             <view class="formInput passwd">
                 <text class="iconfont icon-passwd icon-password"/>

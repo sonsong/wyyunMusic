@@ -1,0 +1,5 @@
+<import src="../../../../common/template/musicList.wxml"/>
+<scroll-view scroll-y class="wrap">
+
+    <template is="musicList" data="{{musicList}}"/>
+</scroll-view>

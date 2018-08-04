@@ -1,0 +1,27 @@
+<import src="../../../../common/template/musicList.wxml"/>
+<scroll-view scroll-y class="wrap">
+    <view class="_top">
+        <view class="top_nav flex">
+            <view bindtap='selectNav' id="single" class="{{flag === 'single' ? 'single' : ''}}">单曲</view>
+            <view bindtap='selectNav' id="show" class="{{flag === 'show' ? 'show' : ''}}">节目</view>
+            <view bindtap='selectNav' id="mv" class="{{flag === 'mv' ? 'mv' : ''}}">MV</view>
+        </view>
+        <view class="top_type flex">
+            <view bindtap='selectMusicType' id="song" class="{{_flag === 'song' ? 'song' : ''}}">歌曲
+                <text class="total">12</text>
+            </view>
+            <view bindtap='selectMusicType' id="singer" class="{{_flag === 'singer' ? 'singer' : ''}}">歌手
+                <text class="total">12</text>
+            </view>
+            <view bindtap='selectMusicType' id="album" class="{{_flag === 'album' ? 'album' : ''}}">专辑
+                <text class="total">12</text>
+            </view>
+        </view>
+    </view>
+    <view class="flex search">
+        <view class="iconfont icon-fangdajing"></view>
+        <input class="search_music" placeholder='搜索本地歌曲' placeholder-class="placeholder" />
+    </view>
+    
+    <template is="musicList"/>
+</scroll-view>

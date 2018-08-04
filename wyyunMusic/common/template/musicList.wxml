@@ -1,0 +1,30 @@
+<template name="musicList">
+    <view class="content">
+        <view class="playAll">
+            <view bindtap='skipPlayMusic' data-musicList='{{musicList}}'>
+                <text class="iconfont icon-vedio" />
+                <text>播放全部</text>
+            </view>
+
+            <view>
+                <text class="iconfont icon-vedio" />
+                <text>管理</text>
+            </view>
+        </view>
+        <view class="playAll music_list" wx:for="{{musicList}}" wx:key="{{idnex}}" 
+            bindtap='skipPlayMusic' data-music="{{item}}">
+            <view>
+                <view>{{item.name}}</view>
+                <view class="music_detail">
+                    <view class="iconfont icon-gou"></view>
+                    <!--<text>1.2M</text>-->
+                    <view>{{item.auth}}</view>
+                </view>
+            </view>
+            <view>
+                <text class="iconfont icon-music_mv" wx:if="{{item.mv !== 0}}" id="{{item.mv}}"></text>
+                <text>...</text>
+            </view>
+        </view>
+    </view>
+</template>

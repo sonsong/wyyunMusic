@@ -1,1 +1,102 @@
-/* pages/tarbar/vedio/index.wxss */
+.wrap{
+    background: #eef0ef;
+}
+.wrap .top {
+    width: 100%;
+    height: 90px;
+    background: #c62f2f;
+}
+.wrap .top_nav{
+    position: fixed;
+    top:40px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #c62f2f;
+    font-size: 16px;
+    color:#fff;
+    z-index: 3;
+}
+.wrap .top_nav .recommend, .mv, .dance, .music, .showTime{
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+}
+.wrap .top_nav .bottom{
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+}
+.wrap .content{
+    background: #fff;
+    border-bottom: 10px solid #eef0ef;
+}
+.wrap .part{
+    width: 95%;
+    padding-top:10px; 
+    margin: 0 2.5% 0 2.5%;
+}
+.wrap .video{
+    position: relative;
+    height: 300px;
+    border-bottom: 1px solid rgb(236, 232, 232);
+}  
+.wrap .bofang{
+    position: absolute;
+    top:95px;
+    left: 178px;
+    font-size: 38px;
+    color:#c62f2f;
+}                                                                                                            
+.wrap .video .video_img{
+    width: 100%;
+    height: 240px;
+    background: pink;
+    border-radius: 10px;
+}
+.wrap .video .video_desc{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.wrap .video_detail{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top:-83px;
+    color:#fff;
+    font-size: 12px;
+}
+.wrap .video_detail view:last-child{
+    margin-right: 10px;
+}
+.wrap .video_detail .iconfont{
+    margin: 0 5px 0 10px;
+}
+.wrap .mess{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}.wrap .mess .from{
+    height: 30px;
+    line-height: 30px;
+}
+.wrap .mess .from > view{
+    margin-left: 10px;
+}
+.wrap .mess .dl{
+    height: 30px;
+    line-height: 30px;
+}
+.wrap .mess .dl > view:first-child{
+    margin-right:30px;
+}
+.wrap .mess .from > image{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+@import "../../../common/css/search.wxss"

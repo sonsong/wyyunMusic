@@ -1,23 +1,26 @@
 {
     "pages": [
-        "wyyunMusic/login/login_index/index",
-        "wyyunMusic/login/reset_passwd/index",
-        "wyyunMusic/login/tele_login/index",
-        "wyyunMusic/regist/index",
+        "wyyunMusic/index/tarbar/found/index",
+        "wyyunMusic/play_music/index",
+        "wyyunMusic/index/tarbar/found/musicListDetail/index",
+        "wyyunMusic/index/tarbar/account/index",
         "wyyunMusic/index/tarbar/account/myInfo/index",
         "wyyunMusic/index/tarbar/account/myInfo/updataName/index",
-        "wyyunMusic/index/tarbar/account/index",
         "wyyunMusic/index/tarbar/vedio/index",
         "wyyunMusic/index/tarbar/my/index",
         "wyyunMusic/index/tarbar/friends/index",
-        "wyyunMusic/index/tarbar/found/index"
+        "wyyunMusic/index/tarbar/my/localMusics/index",
+        "wyyunMusic/login/login_index/index",
+        "wyyunMusic/login/reset_passwd/index",
+        "wyyunMusic/login/tele_login/index",
+        "wyyunMusic/regist/index"
     ],
     "window": {
         "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#c62f2f",
         "navigationBarTitleText": "网易云音乐Beta",
         "navigationBarTextStyle": "#fff",
-        "enablePullDownRefresh": true
+        "enablePullDownRefresh": false
     },
     "tabBar": {
         "color": "#666",

@@ -1,0 +1,59 @@
+.wrap .content > view {
+    height: 50px;
+    border-bottom: 1px solid rgb(228, 225, 225);
+}
+
+.wrap .content > view:first-child {
+    line-height: 50px;
+}
+
+.wrap .content .playAll {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap .content .playAll > view {
+    margin: 0 20px;
+}
+
+.wrap .content .playAll .music_detail {
+    display: flex;
+    font-size: 12px;
+    margin: 5px 0;
+    color: rgb(165, 165, 165);
+}
+
+.wrap .content .playAll .music_detail > view:first-child {
+    color: rgb(75, 176, 235);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.wrap .content .playAll > view > text:first-child {
+    margin-right: 10px;
+}
+
+.wrap .content .playAll .music_detail > view:nth-child(2) {
+    padding: 0 10px 0 3px;
+    overflow: hidden;
+}
+
+.wrap .content .music_list > view:first-child {
+    margin: 5px 20px;
+}
+
+.wrap .content .music_list > view:last-child > view {
+    color: rgb(189, 180, 180);
+    font-weight: normal;
+}
+
+.wrap .content .music_list > view:last-child > text {
+    position: relative;
+    left: -10px;
+    top: 9px;
+    font-size: 24px;
+}
+.wrap .content .music_list > view:last-child > text:last-child{
+    top:1px;
+    margin-left: 20px;
+}
