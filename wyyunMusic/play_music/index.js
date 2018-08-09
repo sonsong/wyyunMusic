@@ -121,16 +121,16 @@ Page({
     },
     //创建音乐播放器
     createAudioPlay() {
-
         const that = this;
 
         //计划播放的音乐
         const planPlay = that.data.music;
-        wx.setNavigationBarTitle({
-            title: planPlay.name,
-        })
+        this.setBatTitle(planPlay.name);
 
         const act = wx.createInnerAudioContext();
+        this.setData({
+            audioContext: act
+        })
         
         //音乐源
         act.src = planPlay.url;
@@ -143,32 +143,11 @@ Page({
         //循环播放
         act.loop = false;
 
-        let duration = 0;
-        //播放时长
-        const intervalId = setInterval(() => {
-            duration = act.duration;
-            if (duration !== 0) {
-                clearInterval(intervalId);
-                that.setData({
-                    max: duration
-                })
-
-                let minit = parseInt(duration / 60);
-                let second = duration % 60;
-                if (second < 10) {
-                    this.setData({
-                        time: "0" + minit + ":0" + second.toFixed(0)
-                    })
-                } else {
-                    this.setData({
-                        time: "0" + minit + ":" + second.toFixed(0)
-                    })
-                }
-            }
-        }, 30);
-
         //开始播放  只要音乐播放就会执行 seek函数不回
         act.onPlay(() => {
+            //播放时长
+            this.getPlayDuration(act);
+            
             this.myRotate();
             let val = this.data.value;
 
@@ -192,20 +171,16 @@ Page({
             } else {
                 num++
             }
-
+            let music = that.data.musicStacks[num];
             this.setData({
-                music: that.data.musicStacks[num],
+                music,
                 position: num
             })
 
-            wx.setStorageSync("play_position", num)
+            wx.setStorageSync("play_position", num);
             //从新生成音乐实例
             that.createAudioPlay();
         });
-
-        this.setData({
-            audioContext : act
-        })
     },
     //播放或暂定
     pauseOrPlayMusic() {
@@ -267,14 +242,18 @@ Page({
         //停止当前音乐，并销毁该实例
         let act = this.data.audioContext;
         act.stop();
-        act.destroy();
+       // act.destroy();
 
         this.setData({
             music: nextMusic,
             position: num
         })
 
-        this.createAudioPlay();
+        //this.createAudioPlay();
+        
+        //音乐源
+        act.src = nextMusic.url;
+        this.setBatTitle(nextMusic.name);
     },
     //是否循环播放
     loopMusic() {
@@ -389,21 +368,6 @@ Page({
             }
         })
     },
-    //获取audio对象
-    getAduioContextFactory() {
-        let audioObj = wx.getStorageSync('audio');
-        
-        console.log(audioObj);
-
-        if(!audioObj){
-            audioObj = wx.createInnerAudioContext();
-            this.setData({
-                audioContext : audioObj
-            })
-        }
-
-        return audioObj
-    },
     //控制菜单列表的隐藏与显示
     showOrHiddenMusicList(){
         let show = !this.data.show;
@@ -455,9 +419,42 @@ Page({
         //当前的音乐播放器
         let act = this.data.audioContext;
         act.stop();
-        act.destroy();
+       // act.destroy();
 
-        this.createAudioPlay();
+        //this.createAudioPlay();
+        act.src = music.src;
+        this.setBatTitle(music.name);
+    },
+    //设置歌名
+    setBatTitle(name){
+        wx.setNavigationBarTitle({
+            title: name,
+        })
+    },
+    //获取歌曲时常
+    getPlayDuration(act){
+        const that = this;
+        let duration = 0;
+       const intervalId =  setInterval(() => {
+            duration = act.duration;
+            if (duration !== 0) {
+                clearInterval(intervalId);
+                that.setData({
+                    max: duration
+                })
 
+                let minit = parseInt(duration / 60);
+                let second = duration % 60;
+                if (second < 10) {
+                    this.setData({
+                        time: "0" + minit + ":0" + second.toFixed(0)
+                    })
+                } else {
+                    this.setData({
+                        time: "0" + minit + ":" + second.toFixed(0)
+                    })
+                }
+            }
+        }, 30);
     }
 })
